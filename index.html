@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JS Cloudimage Responsive Example with lazy load</title>
+        <title>Scaleflex test</title>
         <meta charset="UTF-8" />
     </head>
     <style>
@@ -13,14 +13,11 @@
         }
     </style>
     <body>
-        <h1>Voyage en Ecosse Moodboard</h1>
-
+        <h1>Scaleflex test</h1>
+        <h2>Voyage en Ecosse Moodboard</h2>
         <!-- WITHOUT SCALEFLEX BLOCK -->
-
         <div style="background-color: lightcoral">
             <h3>Scaleflex OFF</h3>
-            <h4>From the internet -></h4>
-            <h5>RAW</h5>
             <div> 
                 <img class="myimg" src="./images/11675205.jpg" 
                      alt="Photo 1">
@@ -29,34 +26,24 @@
                 <img class="myimg" src="./images/les5bonnesraisonsecosse-hero.jpg" 
                      alt="Photo 3">
             </div>
-            <h4>Self hosted -></h4>
-            <div></div>
         </div>
 
         <!-- WITH SCALEFLEX BLOCK -->
-        <h3>Scaleflex ON</h3>
-        <img class="myimg" ci-src="./images/11675205.jpg" ci-ratio="0.5"
-             alt="Photo 1">
-
-
-        <script>
-            window.lazySizesConfig = window.lazySizesConfig || {};
-            window.lazySizesConfig.init = false;
-        </script>
-        <script src="https://cdn.scaleflex.it/filerobot/js-cloudimage-responsive/lazysizes.min.js"></script>
-
-
-        <!-- Add js-cloudimage-responsiv library -->
-        <script src="https://cdn.scaleflex.it/plugins/js-cloudimage-responsive/4.5.0/js-cloudimage-responsive.min.js"></script>
-
-        <!-- Initialize cloudimage responsive -->
-        <script>
-            var cloudimgResponsive = new window.CIResponsive({
-                token: "demo",
-                baseUrl: "https://cloudimage.public.airstore.io/demo/",
-                lazyLoading: true
-            });
-            window.lazySizes.init();
-        </script>
+        <div style="background-color: lightgreen">
+            <h3>Scaleflex ON</h3>
+            <div>
+                <h4>RESIZE</h4>
+                <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/11675205.jpg?width=400" alt="Photo 1">
+                <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/332af0bf6d_113036_01-intro-2402.jpg?width=400" alt="Photo 2">
+                <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/les5bonnesraisonsecosse-hero.jpg?width=400" alt="Photo 3">
+            </div>
+            
+            <div>
+                <h4>WITH WATERMARK</h4>
+                <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/11675205.jpg?&wat=1" alt="Photo 1">
+                <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/332af0bf6d_113036_01-intro-2402.jpg?wat=1" alt="Photo 2">
+                <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/les5bonnesraisonsecosse-hero.jpg?wat=1" alt="Photo 3">
+            </div>
+        </div>
     </body>
 </html>
