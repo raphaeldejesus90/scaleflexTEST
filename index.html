@@ -32,7 +32,7 @@
 
         <!-- WITH SCALEFLEX BLOCK -->
         <div style="background-color: lightgreen">
-            <h3>Scaleflex ON</h3>
+            <h3>Cloud image ON</h3>
             <div>
                 <h4>FIXED WITH</h4>
                 <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/11675205.jpg?width=400" alt="Photo 1">
@@ -58,7 +58,29 @@
                 <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/test.jpg?blur_faces=1&ci_info=1" alt="Photo 1">
             </div>
 
-            <div></div>
+            <div>
+                <h4>Cloud image responsive</h4>
+                <h5>Image not found</h5>
+                <img ci-src="notfound.jpg" ci-ratio="1.5" />
+                <h5>Image not found</h5>
+                <img ci-src="test.jpg" ci-ratio="1.5" />
+            </div>
         </div>
+
+
+        <!-- Add js-cloudimage-responsiv library -->
+        <script src="https://cdn.scaleflex.it/plugins/js-cloudimage-responsive/4.5.0/js-cloudimage-responsive.min.js"></script>
+
+        <!-- Initialize cloudimage responsive -->
+        <script>
+            var cloudimgResponsive = new window.CIResponsive({
+                token: "aqbiseuucq",
+                baseUrl: "https://raphaeldejesus90.github.io/images/",
+            });
+        </script>
+
     </body>
+
+
+
 </html>
