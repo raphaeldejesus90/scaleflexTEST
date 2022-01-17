@@ -6,17 +6,30 @@
     </head>
     <style>
         body {
-            background-color: linen;
+            background-color: antiquewhite;
+            font-family: "Arial";
         }
         .myimg{
             padding: 5px;
         }
+        .sfoffsection{
+            background-color: indianred;
+            padding: 10px;
+        }
+        .sfonsection{
+            background-color: lightgreen;
+            padding: 10px;
+        }
+        .cirsection{
+            background-color: lightskyblue;
+            padding: 10px;
+        }
     </style>
     <body>
         <h1>Scaleflex test</h1>
-        <h2>Voyage en Ecosse Moodboard</h2>
+        <h2>Scotland trip</h2>
         <!-- WITHOUT SCALEFLEX BLOCK -->
-        <div style="background-color: lightcoral">
+        <div class="sfoffsection">
             <h3>Scaleflex OFF</h3>
             <div> 
                 <img class="myimg" src="./images/11675205.jpg" 
@@ -30,43 +43,58 @@
             </div>
         </div>
 
+        <br>
+
         <!-- WITH SCALEFLEX BLOCK -->
-        <div style="background-color: lightgreen">
+        <div class="sfonsection">
             <h3>Cloud image ON</h3>
             <div>
-                <h4>FIXED WITH</h4>
+                <h4>Fixed with</h4>
                 <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/11675205.jpg?width=400" alt="Photo 1">
                 <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/332af0bf6d_113036_01-intro-2402.jpg?width=400" alt="Photo 2">
                 <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/les5bonnesraisonsecosse-hero.jpg?width=400" alt="Photo 3">
             </div>
 
             <div>
-                <h4>WITH WATERMARK</h4>
+                <h4>With watermark</h4>
                 <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/11675205.jpg?&wat=1" alt="Photo 1">
             </div>
 
             <div>
-                <h4>CROP</h4>
+                <h4>Crop</h4>
                 <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/11675205.jpg?h=300&w=300&gravity=auto" alt="Photo 1">
             </div>
 
             <div>
-                <h4>AROUND FACES</h4>
-                <h5>crop</h5>
-                <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/test.jpg?w&h=100&func=face" alt="Photo 1">
-                <h5>blur with ci informations</h5>
-                <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/test.jpg?blur_faces=1&ci_info=1" alt="Photo 1">
-            </div>
-
-            <div>
-                <h4>Cloud image responsive</h4>
-                <h5>Image not found</h5>
-                <img ci-src="notfound.jpg" ci-ratio="1.5" />
-                <h5>Image not found</h5>
-                <img ci-src="arcade_static.png" ci-ratio="1.5" />
+                <h4>Around faces</h4>
+                <div style="border-style: dashed; border-color: blue; padding:10px">
+                    <h5>Face function</h5>
+                    <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/test.jpg?w&h=100&func=face" alt="Photo 1">
+                    <h5>Blur with ci informations</h5>
+                    <img class="myimg" src="https://aqbiseuucq.cloudimg.io/raphaeldejesus90.github.io/scaleflexTEST/images/test.jpg?blur_faces=1&ci_info=1" alt="Photo 1">
+                </div>
             </div>
         </div>
 
+        <br>
+
+        <div class="cirsection">
+            <h4>Cloud image responsive</h4>
+            <h5>Image not found</h5>
+            <img ci-src="notfound.jpg" ci-ratio="1.5" />  
+            <h5>Responsive image</h5>
+            <img ci-src="inma-lesielle.jpg" ci-ratio="1.5" />
+            <h5>Responsive image + cloud image transformation</h5>
+            <img ci-src="inma-lesielle.jpg" ci-params="gray=1&bright=10"/>
+            <h5>Image Background</h5>
+            <p ci-bg-url="inma-lesielle.jpg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu nisi bibendum, iaculis sem eget, fermentum elit. Cras erat odio, dignissim ac pharetra nec, ultricies id diam. Nam mi arcu, lacinia in auctor eu, sodales eget felis. Sed varius, tellus sed euismod interdum, nulla turpis ornare nunc, at pharetra justo diam sed ante. Praesent mattis pulvinar ante a iaculis. Ut facilisis orci eros, consequat interdum mauris sagittis aliquet. Donec dapibus, tortor vel euismod ultrices, ex urna accumsan ex, sed fermentum sem lectus non mauris. Sed elementum ut turpis sit amet aliquet. In in ligula mollis, cursus risus ut, suscipit tortor. Etiam quam justo, interdum eget rutrum in, lacinia eget purus. Nulla id aliquam ligula. Nam eleifend justo ipsum, ut suscipit nisl bibendum eu.</p>
+        </div>
+
+        <script>
+            window.lazySizesConfig = window.lazySizesConfig || {};
+            window.lazySizesConfig.init = false;
+        </script>
+        <script src="https://cdn.scaleflex.it/filerobot/js-cloudimage-responsive/lazysizes.min.js"></script>
 
         <!-- Add js-cloudimage-responsiv library -->
         <script src="https://cdn.scaleflex.it/plugins/js-cloudimage-responsive/4.5.0/js-cloudimage-responsive.min.js"></script>
@@ -74,13 +102,12 @@
         <!-- Initialize cloudimage responsive -->
         <script>
             var cloudimgResponsive = new window.CIResponsive({
-                token: "aqbiseuucq",
-                baseUrl:"https://commedesgrands.fr/assets/img/"
+                token: "demo",
+                baseUrl: "https://cloudimage.public.airstore.io/demo/",
+                lazyLoading: true  
             });
+            window.lazySizes.init();
         </script>
 
     </body>
-
-
-
 </html>
